@@ -121,7 +121,7 @@ datasource db {
 
 [Step-by-step tutorials](https://ui.shadcn.com/docs/installation/next)
 
-`settings.json`
+`.vscode/settings.json`
 
 ```json
 {
