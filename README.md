@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 yarn add -D prettier prettier-plugin-tailwindcss eslint-config-prettier
 ```
 
-`.prettierrc`
+```.prettierrc```
 
 ```json
 {
@@ -28,7 +28,7 @@ yarn add -D prettier prettier-plugin-tailwindcss eslint-config-prettier
 }
 ```
 
-`.eslintrc.json`
+```.eslintrc.json```
 
 ```json
 {
@@ -36,7 +36,7 @@ yarn add -D prettier prettier-plugin-tailwindcss eslint-config-prettier
 }
 ```
 
-`package.json`
+```package.json```
 
 ```json
 "format": "prettier -w -u ./"
@@ -48,7 +48,7 @@ yarn add -D prettier prettier-plugin-tailwindcss eslint-config-prettier
 yarn add -D prisma ts-node && yarn add @prisma/client && yarn prisma init
 ```
 
-`prisma/seed.ts`
+```prisma/seed.ts```
 
 ```ts
 import { PrismaClient } from "@prisma/client"
@@ -70,7 +70,7 @@ main()
   })
 ```
 
-`src/lib/db.ts`
+```src/lib/db.ts```
 
 ```ts
 import { PrismaClient } from "@prisma/client"
@@ -88,14 +88,14 @@ export const prisma = globalThis.db ?? prismaClientSingleton()
 if (process.env.NODE_ENV !== "production") globalThis.db = prisma
 ```
 
-`.env.example`
+```.env.example```
 
 ```yaml
 POSTGRES_PRISMA_URL="postgresql://postgres:postgres@localhost:5432/dev?schema=public"
 POSTGRES_URL_NON_POOLING="postgresql://postgres:postgres@localhost:5432/dev?schema=public"
 ```
 
-`prisma/schema.prisma`
+```prisma/schema.prisma```
 
 ```prisma
 datasource db {
@@ -105,7 +105,7 @@ datasource db {
 }
 ```
 
-`package.json`
+```package.json```
 
 ```json
 "reset": "prisma db push --force-reset && prisma db seed"
@@ -121,7 +121,11 @@ datasource db {
 
 [Step-by-step tutorials](https://ui.shadcn.com/docs/installation/next)
 
-`.vscode/settings.json`
+```bash
+npx shadcn-ui@latest init && npx shadcn-ui@latest add
+```
+
+```.vscode/settings.json```
 
 ```json
 {
@@ -134,7 +138,7 @@ datasource db {
 
 ## Launch
 
-`.vscode/launch.json`
+```.vscode/launch.json```
 
 ```json
 {
