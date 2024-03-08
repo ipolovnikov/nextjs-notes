@@ -54,6 +54,8 @@ package.json
 yarn add -D prisma ts-node && yarn add @prisma/client && yarn prisma init
 ```
 
+[Best practice for instantiating Prisma](https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices)
+
 ```
 prisma/seed.ts
 ```
@@ -77,6 +79,8 @@ main()
     process.exit(1)
   })
 ```
+
+[Seeding Prisma](https://www.prisma.io/docs/orm/prisma-migrate/workflows/seeding)
 
 ```
 src/lib/db.ts
