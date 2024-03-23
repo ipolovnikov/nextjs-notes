@@ -221,11 +221,11 @@ yarn add -D @commitlint/cli @commitlint/config-conventional husky && npx husky i
 ```
 
 ```bash
-echo "npm run lint" > .husky/pre-commit
+echo npm run lint > .husky/pre-commit
 ```
 
 ```bash
-echo "npx --no-install commitlint --edit" > .husky/commit-msg
+echo npx --no-install commitlint --edit > .husky/commit-msg
 ```
 
 ```
