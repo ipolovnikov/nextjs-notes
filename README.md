@@ -213,3 +213,27 @@ npx shadcn-ui@latest init && npx shadcn-ui@latest add
   ]
 }
 ```
+
+## Husky & Commitlint
+
+```bash
+yarn add -D @commitlint/cli @commitlint/config-conventional husky && npx husky init
+```
+
+```bash
+echo "npm run lint" > .husky/pre-commit
+```
+
+```bash
+echo "npx --no-install commitlint --edit" > .husky/commit-msg
+```
+
+```
+.commitlintrc
+```
+
+```json
+{
+  "extends": ["@commitlint/config-conventional"]
+}
+```
