@@ -137,6 +137,25 @@ package.json
 },
 ```
 
+## Winston
+
+```bash
+yarn add winston
+```
+
+```
+src/lib/logger.ts
+```
+
+```ts
+import winston from "winston"
+
+export const logger = winston.createLogger({
+  level: "debug",
+  transports: [new winston.transports.Console()],
+})
+```
+
 ## Shadcn/ui
 
 [Step-by-step tutorials](https://ui.shadcn.com/docs/installation/next)
