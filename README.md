@@ -4,8 +4,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -13,7 +11,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Prettier
 
 ```bash
-yarn add -D prettier prettier-plugin-tailwindcss eslint-config-prettier
+npm i -D prettier prettier-plugin-tailwindcss eslint-config-prettier
 ```
 
 ```
@@ -36,7 +34,7 @@ yarn add -D prettier prettier-plugin-tailwindcss eslint-config-prettier
 
 ```json
 {
-  "extends": ["next", "prettier"]
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"]
 }
 ```
 
@@ -45,13 +43,13 @@ package.json
 ```
 
 ```json
-"format": "prettier -w -u ./"
+"lint": "prettier -w -u ./ && next lint"
 ```
 
 ## Husky & Commitlint
 
 ```bash
-yarn add -D @commitlint/cli @commitlint/config-conventional husky && npx husky init
+npm i -D @commitlint/cli @commitlint/config-conventional husky && npx husky init
 ```
 
 ```bash
@@ -75,7 +73,7 @@ echo npx --no-install commitlint --edit > .husky/commit-msg
 ## Prisma
 
 ```bash
-yarn add -D prisma ts-node && yarn add @prisma/client && yarn prisma init
+npm i -D prisma ts-node && npm i @prisma/client && npx prisma init
 ```
 
 [Best practice for instantiating Prisma](https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices)
@@ -161,31 +159,12 @@ package.json
 },
 ```
 
-## Winston
-
-```bash
-yarn add winston
-```
-
-```
-src/lib/logger.ts
-```
-
-```ts
-import winston from "winston"
-
-export const logger = winston.createLogger({
-  level: "debug",
-  transports: [new winston.transports.Console()],
-})
-```
-
 ## Shadcn/ui
 
 [Step-by-step tutorials](https://ui.shadcn.com/docs/installation/next)
 
 ```bash
-npx shadcn-ui@latest init && npx shadcn-ui@latest add
+npx shadcn@latest init -d && npx shadcn@latest add button
 ```
 
 ```
