@@ -105,7 +105,7 @@ main()
 [Seeding Prisma](https://www.prisma.io/docs/orm/prisma-migrate/workflows/seeding)
 
 ```
-src/lib/db.ts
+src/lib/prisma.ts
 ```
 
 ```ts
@@ -119,11 +119,9 @@ declare const globalThis: {
   prismaGlobal: ReturnType<typeof prismaClientSingleton>
 } & typeof global
 
-const prisma = globalThis.prismaGlobal ?? prismaClientSingleton()
+export const db = globalThis.prismaGlobal ?? prismaClientSingleton()
 
-export default prisma
-
-if (process.env.NODE_ENV !== "production") globalThis.prismaGlobal = prisma
+if (process.env.NODE_ENV !== "production") globalThis.prismaGlobal = db
 ```
 
 ```
@@ -166,7 +164,11 @@ package.json
 [Step-by-step tutorials](https://ui.shadcn.com/docs/installation/next)
 
 ```bash
-npx shadcn@latest init -d && npx shadcn@latest add button
+npx shadcn@latest init
+```
+
+```bash
+npx shadcn@latest add button
 ```
 
 ```
