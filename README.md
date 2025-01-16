@@ -24,6 +24,7 @@ npm i -D prettier prettier-plugin-tailwindcss eslint-config-prettier
   "tabWidth": 2,
   "useTabs": false,
   "semi": false,
+  "endOfLine": "crlf",
   "plugins": ["prettier-plugin-tailwindcss"]
 }
 ```
